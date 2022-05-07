@@ -3,7 +3,8 @@ import setuptools
 setuptools.setup(
     name="jasn1",
     version="0.0.1",
-    author="Matthew Laurence Willaim Graham",
+    author="Matthew Laurence William Graham",
     description="Parsing ASN.1 data to JSON and vice-versa",
-    packages=["jasn1"]
+    packages=setuptools.find_packages(),
+    include_package_data=True
 )

@@ -1,0 +1,8 @@
+# Build Outputs
+/dist/*
+/build/*
+jsan1.egg-info/*
+
+# Cached Python Binaries
+*.pyc
+__pycache__/*

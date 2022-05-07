@@ -1,6 +1,6 @@
-import tags as ASN1
-import snmp as SNMP
-import ldap as LDAP
+from .asn1 import *
+from .snmp import *
+from .ldap import *
 
 def simplify_json_data(json_data):
     simplified_data = {}
@@ -25,13 +25,13 @@ def decode_asn1(asn1: bytes, node: tuple = (), protocol=None, simplify=True):
     bit_6 = tag & (1 << (6 - 1))
 
     if not bit_8 and not bit_7:
-        tag_class = classes.UNIVERSAL
+        tag_class = ASN1.classes.UNIVERSAL
     elif not bit_8 and bit_7:
-        tag_class = classes.APPLICATION
+        tag_class = ASN1.classes.APPLICATION
     elif bit_8 and not bit_7:
-        tag_class = classes.CONTEXT_SPECIFIC
+        tag_class = ASN1.classes.CONTEXT_SPECIFIC
     elif bit_8 and bit_7:
-        tag_class = classes.PRIVATE
+        tag_class = ASN1.classes.PRIVATE
 
     tag_constructed = bool(bit_6)
 
