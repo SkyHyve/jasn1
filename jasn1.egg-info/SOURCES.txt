@@ -1,0 +1,8 @@
+README.md
+setup.py
+jasn1/__init__.py
+jasn1/parse.py
+jasn1.egg-info/PKG-INFO
+jasn1.egg-info/SOURCES.txt
+jasn1.egg-info/dependency_links.txt
+jasn1.egg-info/top_level.txt
